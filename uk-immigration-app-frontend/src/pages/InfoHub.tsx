@@ -30,8 +30,17 @@ const InfoHub = () => {
         >
           InfoHub
         </h2>
-        <InfoCard />
-        <InfoCard />
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 3,
+          }}
+        >
+          <InfoCard />
+          <InfoCard />
+        </Box>
       </Box>
       <Footer />
     </div>
