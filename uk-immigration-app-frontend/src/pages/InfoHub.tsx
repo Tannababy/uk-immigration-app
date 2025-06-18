@@ -4,8 +4,12 @@ import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import backgroundImage from "../TravelPhoto.jpg";
 import InfoCard from "../components/InfoCard";
+import { useState } from "react";
 
 const InfoHub = () => {
+  const [infoCardsData, setInfoCardsData] = useState<[]>([]); // To store the fetched data
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   return (
     <div>
       <Header />
@@ -59,4 +63,3 @@ const InfoHub = () => {
 };
 
 export default InfoHub;
-        
