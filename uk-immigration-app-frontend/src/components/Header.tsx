@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -86,6 +86,6 @@ const Header = () => {
       </AppBar>
     </Box>
   );
-}
+};
 
-export default Header; 
+export default Header;

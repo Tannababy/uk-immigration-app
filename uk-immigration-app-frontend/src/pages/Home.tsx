@@ -28,7 +28,7 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           p: 4,
         }}
       >
@@ -37,15 +37,31 @@ const Home = () => {
             fontSize: "50px",
             textAlign: "center",
             color: "navy",
+            marginTop: "0px",
+            paddingTop: "0px",
+            marginBottom: "4px",
           }}
         >
-          Welcome to the UK Immigration Application!
+          Welcome to the UK Immigration Absence Counter Application!
         </h1>
+        <p
+          style={{
+            fontSize: "35px",
+            textAlign: "center",
+            color: "navy",
+            fontWeight: "bolder",
+            textShadow: "1px 1px 2px red",
+          }}
+        >
+          Your comprehensive tool for understanding UK immigration rules and
+          calculating absence days.
+        </p>
         <Stack spacing={2} direction="row">
           <Button
             variant="contained"
             component={Link}
             to="/infoHub"
+            size="large"
             sx={{ py: 2, px: 4 }}
           >
             InfoHub
@@ -54,6 +70,7 @@ const Home = () => {
             variant="contained"
             component={Link}
             to="/absenceCounter"
+            size="large"
             sx={{ py: 2, px: 4 }}
           >
             Absence Counter

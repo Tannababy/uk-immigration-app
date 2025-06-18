@@ -24,12 +24,23 @@ const InfoHub = () => {
             fontSize: "50px",
             textAlign: "center",
             color: "navy",
-            paddingTop: "50px",
-            marginTop: "0px",
           }}
         >
           InfoHub
         </h2>
+        <p
+          style={{
+            fontSize: "30px",
+            textAlign: "center",
+            color: "navy",
+            fontWeight: "bolder",
+            textShadow: "1px 1px 2px red",
+          }}
+        >
+          Explore various UK immigration routes and their general guidelines.
+          For detailed rules and specific advice, always consult official GOV.UK
+          resources.
+        </p>
         <Box
           sx={{
             display: "flex",
@@ -48,3 +59,4 @@ const InfoHub = () => {
 };
 
 export default InfoHub;
+        
