@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import backgroundImage from "../TravelPhoto.jpg";
 import InfoCard from "../components/InfoCard";
 import { useState } from "react";
+import { fetchAllImmigrationRoutesMock } from "../utils/APICalls";
+import { ImmigrationRoutes } from "../types/ImmigrationRoutes";
 
 const InfoHub = () => {
   const [infoCardsData, setInfoCardsData] = useState<[]>([]); // To store the fetched data
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
+    
+    
   return (
     <div>
       <Header />
