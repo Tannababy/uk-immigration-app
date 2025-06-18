@@ -6,25 +6,38 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+type InfoCardProps = {
+  id: string;
+  title: string;
+  description: string;
+  learnMoreLink?: string;
+};
 
-const InfoCard = () => {
+const InfoCard = ({ id, title, description, learnMoreLink }: InfoCardProps) => {
   return (
-    <Card sx={{ maxWidth: 200 }}>
+    <Card sx={{ maxWidth: 345, minWidth: 275, m: 2 }}>
       <CardContent>
-        <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-          adjective
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
         </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+        <Typography variant="body2" color="text.secondary">
+          {description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      {learnMoreLink && (
+        <CardActions>
+          <Button
+            size="small"
+            href={learnMoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn More
+          </Button>
+        </CardActions>
+      )}
     </Card>
   );
-}
+};
 
 export default InfoCard;

@@ -30,8 +30,7 @@ const AbsenceCounter = () => {
         >
           Absence Counter
         </h2>
-        <InfoCard />
-        <InfoCard />
+
       </Box>
       <Footer />
     </div>

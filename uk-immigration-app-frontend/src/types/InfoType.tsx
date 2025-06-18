@@ -1,5 +1,5 @@
 export type InfoType = {
-    title: String;
-    description: String;
-    learnMoreLink: String;
+    title: string;
+    description: string;
+    learnMoreLink: string;
 }

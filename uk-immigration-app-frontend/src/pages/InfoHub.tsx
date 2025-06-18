@@ -4,16 +4,30 @@ import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import backgroundImage from "../TravelPhoto.jpg";
 import InfoCard from "../components/InfoCard";
+import { CircularProgress } from "@mui/material";
 import { useState } from "react";
-import { fetchAllImmigrationRoutesMock } from "../utils/APICalls";
 import { ImmigrationRoutes } from "../types/ImmigrationRoutes";
+import { useImmigrationRoutes } from "../utils/CallingFunctions";
 
 const InfoHub = () => {
-  const [infoCardsData, setInfoCardsData] = useState<[]>([]); // To store the fetched data
-  const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-    
-    
+  const { infoCardsData, isLoading } = useImmigrationRoutes();
+
+  if (isLoading) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "50vh",
+        }}
+      >
+        <CircularProgress />
+        <p style={{ marginLeft: "2" }}>Loading immigration information...</p>
+      </Box>
+    );
+  }
+
   return (
     <div>
       <Header />
@@ -57,8 +71,18 @@ const InfoHub = () => {
             gap: 3,
           }}
         >
-          <InfoCard />
-          <InfoCard />
+          {infoCardsData.length > 0 ? (
+            infoCardsData.map((infoItem) => (
+              <InfoCard
+                id={infoItem.id}
+                title={infoItem.title}
+                description={infoItem.description}
+                learnMoreLink={infoItem.learnMoreLink}
+              />
+            ))
+          ) : (
+            <p>No information cards available</p>
+          )}
         </Box>
       </Box>
       <Footer />
