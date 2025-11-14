@@ -1,18 +1,13 @@
-import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 
-const AbsenceCounter = () => {
+const Holidays = () => {
   return (
     <div>
-      <Header />
-      <Box
-        sx={{
-          height: "90vh",
-          width: "100vw",
-        }}
-      >
+      <Box sx={{ flexGrow: 1 }}>
+        <Header />
+
         <h2
           style={{
             fontSize: "50px",
@@ -21,12 +16,12 @@ const AbsenceCounter = () => {
             textShadow: "2px 2px 2px navy",
           }}
         >
-          Absence Counter
+          UK Public & Bank Holidays
         </h2>
+        <Footer />
       </Box>
-      <Footer />
     </div>
   );
 };
 
-export default AbsenceCounter;
+export default Holidays;

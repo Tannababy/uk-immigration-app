@@ -7,10 +7,6 @@ import Grid from "@mui/material/Grid";
 import backgroundImage from "../TravelPhoto.jpg";
 import InfoCard from "../components/InfoCard";
 
-import { Stack } from "@mui/material";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
-
 const Home = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -53,7 +49,7 @@ const Home = () => {
             title="Info Hub"
             description="Explore various UK immigration routes and their general guidelines."
             image={backgroundImage}
-            link="/infohub"
+            link="/infoHub"
             buttonText="Info Hub"
           />
         </Grid>
@@ -80,11 +76,12 @@ const Home = () => {
             title="Immigration Fees"
             description="Explore various UK immigration fees."
             image={backgroundImage}
-            link="/immigration fees"
+            link="/fees"
             buttonText="Fees"
           />
         </Grid>
-      </Grid>
+          </Grid>
+          <Footer />
     </Box>
   );
 };

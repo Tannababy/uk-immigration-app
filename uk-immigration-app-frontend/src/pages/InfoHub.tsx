@@ -6,13 +6,11 @@ import backgroundImage from "../TravelPhoto.jpg";
 import InfoCard from "../components/InfoCard";
 
 const InfoHub = () => {
-
   return (
     <div>
       <Header />
       <Box
         sx={{
- 
           height: "100vh",
           width: "100vw",
         }}
@@ -47,9 +45,7 @@ const InfoHub = () => {
             justifyContent: "center",
             gap: 3,
           }}
-        >
-         
-        </Box>
+        ></Box>
       </Box>
       <Footer />
     </div>
