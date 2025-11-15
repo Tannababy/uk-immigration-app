@@ -1,7 +1,6 @@
-import React from "react";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import backgroundImage from "../TravelPhoto.jpg";
@@ -9,7 +8,7 @@ import InfoCard from "../components/InfoCard";
 
 const Home = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <Header />
       <h1
         style={{
@@ -37,13 +36,7 @@ const Home = () => {
         Your comprehensive tool for understanding UK immigration rules and
         calculating absence days.
       </p>
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        rowSpacing={1}
-        columnSpacing={1}
-      >
+      <Grid container>
         <Grid size={6}>
           <InfoCard
             title="Info Hub"
@@ -80,8 +73,8 @@ const Home = () => {
             buttonText="Fees"
           />
         </Grid>
-          </Grid>
-          <Footer />
+      </Grid>
+      <Footer />
     </Box>
   );
 };
