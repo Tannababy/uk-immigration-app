@@ -13,6 +13,7 @@ const Holidays = () => {
         `http://localhost:8080/api/holidays?year=${year}`
       );
       const data = await response.json();
+      console.log(data);
       setHolidays(data);
     };
 

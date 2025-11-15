@@ -13,6 +13,10 @@ public class HolidayController {
 
     private HolidayService holidayService;
 
+    public HolidayController(HolidayService holidayService) {
+        this.holidayService = holidayService;
+    }
+
     @GetMapping("/api/holidays")
     public List<Holiday> getHolidays(@RequestParam int year) {
 

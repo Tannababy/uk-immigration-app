@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class HolidayService {
-    private static final String BASE_URL = "https://date.nager.at/api/v3/PublicHolidays/GB";
+    private static final String BASE_URL = "https://date.nager.at/api/v3/PublicHolidays";
 
     public List<Holiday> getHolidaysForYear(int year) {
         String url = BASE_URL + "/" + year + "/GB";
@@ -21,11 +21,13 @@ public class HolidayService {
 
         List<Holiday> holidaysList = new ArrayList<>();
 
-        if (response != null) {
-            for (HolidayResponseDto h : response) {
-                holidaysList.add(new Holiday(h.getName(), h.getDate()));
-            }
+        if (response == null) {
+            return new ArrayList<>();
         }
+        for (HolidayResponseDto h : response) {
+            holidaysList.add(new Holiday(h.getName(), h.getDate()));
+        }
+
 
         return holidaysList;
     }
