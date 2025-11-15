@@ -42,7 +42,7 @@ const Holidays = () => {
 
         {holidays.map((holiday, index) => (
           <li key={index}>
-            {holiday.date} - {holiday.name} ({holiday.countryCode})
+            {holiday.date} - {holiday.name}
           </li>
         ))}
         <Footer />
