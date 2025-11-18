@@ -70,6 +70,7 @@ const Header = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            data-testid="title"
           >
             UK Immigration Calculator
           </Typography>
